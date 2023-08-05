@@ -1,0 +1,228 @@
+print('hello world')
+x=1+23
+print(x)
+name = "John"
+if name =="John" : 
+    print("My name is "+ name )
+def say_hello():
+    print("This is a method")
+    print("Say Hello")
+    
+say_hello()
+print(say_hello())
+a=b=c=10
+print(a)
+print(b)
+print(c)
+a,b,c=11,12,13
+print(a)
+print(b)
+print(c)
+del a
+print(type(b))
+str = "this is a \
+string to assign \
+in python "
+print(str)
+print(str[3])
+print("Where do you live?")
+location = input()
+print("So you live in " + location)
+KeyboardInterrupt#convert a value to string 
+int('75') #This function can be used to convert the provided value into an int
+some_int = 10
+float(some_int)#This function can be used to convert the provided value into a float
+
+input('Please enter number!')
+# The below script will ask for 3 inputs. Each input will be based
+# on the price of the items - the price is determined by you. The output
+# should print the total of the 3 inputs rounded to 2 decimal places e.g
+#
+#   1 coffee @ $ 2.00
+#   1 sandwich @ $ 4.99
+#   1 cake @ $ 2.75
+#
+#   Your total bill is $ 9.74
+
+# Modify the line below
+coffee = input('1 coffee @: $ ')
+
+# Modify the line below
+sandwich = input('1 sandwich @: $ ')
+
+# Modify the line below
+cake = input('1 cake @: $ ')
+
+bill_total = float(coffee) + float(sandwich) + float(cake)
+
+print('Your total bill is $', (bill_total))
+
+a= False
+b= True
+if a or b :
+    print("true")
+    
+bill_total =114
+discount1= 10
+if bill_total >100 and bill_total < 200:
+  print("Bill is greater than 100")
+elif bill_total>200 :
+    print("Bill is greater than 200")
+else:
+    print("Bill is greater than 100")
+    
+print("Total bill ", bill_total)
+
+
+loyalty_customer = True
+total_bill = 124
+
+if loyalty_customer and total_bill > 100:
+    #give 20% discount
+    total_bill = total_bill - (float(total_bill)/ 100) * 20
+elif total_bill > 100:
+    #give 10% discount
+    total_bill = total_bill - (float(total_bill)/ 100) * 10
+else:
+    #sorry no discount, 5% service charge applied.
+    print('Sorry, no discount ...')
+
+print('Total Bill: ', float(total_bill))
+
+http_status=200
+
+match http_status:
+    case 200 | 201:
+        print("Success")
+    case 400:
+        print("Bad Request")
+    case 500:
+        print("Server Error")
+    case _:
+        print("Unknown")
+        
+favorites = ['Creme Brulee', 'Apple Pie', 'Churros', 'Tiramisú', 'Chocolate Cake']
+
+for id, dessert in enumerate(favorites):
+    print('One of my favorite desserts is', id, dessert)
+    
+    favorites = ['Creme Brulee', 'Apple Pie', 'Churros', 'Tiramisú', 'Chocolate Cake']
+
+for id, dessert in enumerate(favorites):
+    print( id, dessert)
+
+
+for dessert in favorites:
+    if dessert == 'Churros':
+        pass
+    print('Other desserts I like are', dessert) 
+    
+for i in range(10):
+    #inner loop
+    for j in range(10):
+        print("£", end ="")
+    print()
+    
+a = isinstance("aa", str)
+print(a) 
+
+def calaculate_tax(bill, tax_rate):
+    return round((bill * tax_rate) /100.00)
+
+print("total tax: ", calaculate_tax(123.99, 5))
+
+#global_scope
+my_global = 10
+#builtin scope -- def
+def fn1():
+    #local scope
+    local_v = 5
+    print("Access to local outside nested inner function", local_v)
+    def fn2():
+        #enclosed scope
+        enclosed_local_v = 10
+        print("Access to enclosed_and local inside nested inner function ", enclosed_local_v)
+        print("Access to local inside nested inner function ", local_v)
+        print("Access to global inside nested inner function", my_global)
+    print("Access to global outside nested inner function", my_global)
+    fn2()
+    
+fn1()
+print("Access to Global outside all function", my_global)
+
+list =[1,2,3, "hello", 4]
+print(*list)
+print(list, sep =" ")
+list.insert(len(list), 5)
+print(list, sep =" ")
+list.append(6)
+print(list, sep =" ")
+list.extend([7, 8, 9 ])
+print(list, sep =" ")
+list.pop(6)
+print(list, sep =" ")
+del list[3]
+print(list, sep =" ")
+
+for x in list:
+    print("Values ", x)
+
+my_tuple = (1, "string", 4.5, True)
+print (my_tuple[1])
+print (type(my_tuple[1]))
+
+print (my_tuple.count(4.5))
+
+print(my_tuple.index(1))
+#my_tuple[0] = 0 #immutable so will throw error 
+for x in my_tuple:
+    print(x)
+
+set_a = { 1, 2, 3, 4, 5, 5}
+print(set_a)
+set_a.add(6)
+print(set_a)
+set_a.remove(3)
+print(set_a)
+set_a.discard(2)
+print(set_a)
+
+set_b = {7, 8, 9}
+print(set_a.union(set_b))
+set_c = {10, 11}
+print(set_a | set_b | set_c)
+
+set_d = {4, 5}
+print(set_a.intersection(set_d))
+print(set_a & set_d)
+print(set_a.difference(set_d))
+print(set_a - set_d)
+
+print(set_a.symmetric_difference(set_d))
+print(set_a ^ set_d)
+
+#print(set_a[0]) #Throws error as set is not ordered sequence
+
+sample_dict = {1: "coffee", 2: "Tea", 3: "Juice"}
+print(sample_dict[1])
+sample_dict[2] = "Mint Tea"
+print(sample_dict[2])
+del sample_dict[3]
+sample_dict["New Key"] = "Juice 2"
+print(sample_dict["New Key"])
+#Don't allow duplicate keys
+#sample_dict[1] = "Mint Tea"
+
+for key, value in sample_dict.items():
+    print(str(key) + " : " + value)
+
+
+def sum_of(**kwargs):
+    sum = 0 
+    for k,v in kwargs.items():
+        sum += v
+    return sum
+
+#print(sum_of(4, 5, 6))
+#print(sum_of(41, 52))
+# print(sum_of(coffee=2.33, tea = 6.77))
