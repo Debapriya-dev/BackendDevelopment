@@ -19,8 +19,5 @@ from django.urls import path, include
 from littleLemon import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('littleLemon.urls')),
-    path('say_hello/', views.say_hello),
-    path('dispaly_date/', views.dispaly_date),
-    path('menu/', views.menu),
+    path('app/',include('littleLemon.urls')),
 ]
